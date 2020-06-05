@@ -45,7 +45,7 @@ header {
 	align-items: center;
 	background-color: var(--content-background);
 	background-image: url("../images/banner.jpg");
-	background-position: 0px -200px;
+	background-position: 0px -400px;
 	background-repeat: no-repeat;
     background-size: cover;
 	display: flex;
@@ -59,7 +59,7 @@ header::after {
     content: "";
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0), var(--page-background));
+    background: linear-gradient(transparent, var(--page-background));
     position: absolute;
     top: 0;
 	left: 0;
@@ -164,7 +164,6 @@ section {
 	border-radius: 20px;
 	margin: 20px var(--nav-width) 20px 20px;
 	padding: 20px;
-	transition-duration: 0.5s;
 }
 
 /* Eat any unnecessary spacing. */
@@ -183,10 +182,10 @@ section > *:last-child, .inset > *:last-child {
 .preheader {
 	background-color: var(--content-background);
 	background-image: url("../images/banner.jpg");
+	background-position: 0px -200px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 200px;
-	transition-duration: 0.5s;
 }
 
 .stackedcontent {
@@ -234,7 +233,6 @@ section > *:last-child, .inset > *:last-child {
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
 	header {
-		background-position: 0 0;
 		justify-content: space-between;
 	}
 
@@ -271,17 +269,15 @@ section > *:last-child, .inset > *:last-child {
 	section {
 		margin-right: 20px;
 	}
-
-	.preheader {
-		height: 0px;
-	}
 }
 
 @media screen and (max-width: 768px) {
 	header {
+		background-position: 0px -200px;
 		flex-flow: column;
 		justify-content: space-around;
-		position: static;
+		position: relative;
+		z-index: 0;
 	}
 	
 	header h1 {
@@ -295,13 +291,21 @@ section > *:last-child, .inset > *:last-child {
 	.inset {
 		margin: 10px 0 0 0;
 	}
+
+	.preheader {
+		background-position: 0px 0px;
+	}
 }
 
 @media screen and (max-width: 575px) {
-	/* Needed if there are 4 nav items
 	header {
-		height: 180px;
-	}*/
+		background-position: 0px -100px;
+/*		height: 180px;   Will be needed again if there are 4 nav items. */
+	}
+
+	.preheader {
+		display: none;
+	}
 
 	.stackedcontent li {
 		display: list-item;
@@ -320,6 +324,7 @@ section > *:last-child, .inset > *:last-child {
 /* Very small screens. */
 @media screen and (max-width: 440px) {
 	header {
+		background-position: 0px 0px;
 		height: 180px;
 	}
 }
