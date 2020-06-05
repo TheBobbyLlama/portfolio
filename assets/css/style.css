@@ -1,0 +1,139 @@
+:root {
+	--page-background: #c0c0d0;
+	--content-color: #202830;
+	--content-background: #a0a0b0;
+	--content-border: #808088;
+	--button-color: #183828;
+	--button-background: #c8f0d0;
+	--button-border: #709080;
+	--button-highlight: #e8f0ec;
+
+	--nav-width: 200px;
+}
+  
+* {
+	box-sizing: border-box;
+	color: var(--content-color);
+	font-family: 'Nunito', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--page-background);
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	align-items: center;
+	background-attachment: fixed;
+	background-color: var(--content-background);
+	background-image: url("../images/banner.jpg");
+    background-size: cover;
+	display: flex;
+	position: sticky;
+	height: 150px;
+	top: 0;
+	width: 100%;
+}
+
+header::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), var(--page-background));
+    position: absolute;
+    top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: var(--nav-width);
+	z-index: 1000;
+}
+
+nav div {
+	align-items: center;
+	background-color: var(--content-background);
+	border: solid 2px var(--content-border);
+	border-radius: 20px;
+	display: flex;
+	margin: 20px;
+	overflow: hidden;
+	padding: 10px;
+	transition-duration: 0.5s;
+
+}
+
+nav a {
+	display: block;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav h3 {
+	font-size: 20px;
+	margin-left: 20px;
+	order: 2;
+	position: relative;
+	right: 10px;
+	transition-delay: 0.25s;
+	transition-duration: 0.5s;
+	writing-mode: vertical-rl;
+}
+
+nav li {
+	background-color: var(--button-background);
+	border: solid 2px var(--button-border);
+	border-radius: 6px;
+	color: var(--button-color);
+	left: -100px;
+	margin: 8px 0px 8px 0px;
+	position: relative;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
+	white-space: nowrap;
+	width: 0px;
+}
+
+nav li:hover {
+	background-color: var(--button-highlight);
+}
+
+nav ul {
+	list-style: none;
+	width: 100%;
+}
+
+nav:hover div {
+	padding-left: 10px;
+	width: 100%;
+}
+
+nav:hover h3 {
+	right: 0;
+}
+
+nav:hover li {
+	left: 0;
+	margin: 8px;
+	width: 100%;
+}
+
+.preheader {
+	background-attachment: fixed;
+	background-color: var(--content-background);
+	background-image: url("../images/banner.jpg");
+	background-size: cover;
+	height: 200px;
+}
