@@ -3,39 +3,54 @@
 	--content-color: #202830;
 	--content-background: #a0a0b0;
 	--content-border: #808088;
+	--inset-background: #9090a0;
+	--inset-border: #707078;
 	--button-color: #183828;
 	--button-background: #c8f0d0;
 	--button-border: #709080;
 	--button-highlight: #e8f0ec;
 
-	--nav-width: 200px;
+	--nav-width: 160px;
 }
   
 * {
 	box-sizing: border-box;
-	color: var(--content-color);
-	font-family: 'Nunito', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
+a {
+	color: #508068;
+}
+
+a:visited {
+	color: #406050;
+}
+
 body {
 	background-color: var(--page-background);
+	color: var(--content-color);
+	font-family: 'Nunito', sans-serif;
 }
 
 h1, h2, h3, h4 {
 	font-family: 'Roboto', sans-serif;
 }
 
+h4 {
+	font-weight: lighter;
+}
+
 header {
 	align-items: center;
-	background-attachment: fixed;
 	background-color: var(--content-background);
 	background-image: url("../images/banner.jpg");
+	background-position: 0px -200px;
+	background-repeat: no-repeat;
     background-size: cover;
 	display: flex;
-	position: sticky;
 	height: 150px;
+	position: sticky;
 	top: 0;
 	width: 100%;
 }
@@ -49,6 +64,13 @@ header::after {
     top: 0;
 	left: 0;
 	z-index: -1;
+}
+
+header h1 {
+	color: #e0e0f0;
+	margin-left: 50px;
+	text-shadow: 0 0 5px var(--content-color);
+	white-space: nowrap;
 }
 
 nav {
@@ -67,6 +89,7 @@ nav div {
 	border: solid 2px var(--content-border);
 	border-radius: 20px;
 	display: flex;
+	justify-content: flex-end;
 	margin: 20px;
 	overflow: hidden;
 	padding: 10px;
@@ -74,7 +97,8 @@ nav div {
 
 }
 
-nav a {
+nav a, nav a:visited {
+	color: var(--button-color);
 	display: block;
 	padding: 4px;
 	text-align: center;
@@ -96,9 +120,9 @@ nav li {
 	background-color: var(--button-background);
 	border: solid 2px var(--button-border);
 	border-radius: 6px;
-	color: var(--button-color);
 	left: -100px;
 	margin: 8px 0px 8px 0px;
+	overflow: hidden;
 	position: relative;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
@@ -113,6 +137,10 @@ nav li:hover {
 nav ul {
 	list-style: none;
 	width: 100%;
+}
+
+nav:hover {
+	width: auto;
 }
 
 nav:hover div {
@@ -130,10 +158,168 @@ nav:hover li {
 	width: 100%;
 }
 
+section {
+	background-color: var(--content-background);
+	border: solid 2px var(--content-border);
+	border-radius: 20px;
+	margin: 20px var(--nav-width) 20px 20px;
+	padding: 20px;
+	transition-duration: 0.5s;
+}
+
+/* Eat any unnecessary spacing. */
+section > *:last-child, .inset > *:last-child {
+	margin-bottom: 0px;
+}
+
+.inset {
+	background-color: var(--inset-background);
+	border: solid 2px var(--inset-border);
+	border-radius: 14px;
+	margin: 20px;
+	padding: 14px;
+}
+
 .preheader {
-	background-attachment: fixed;
 	background-color: var(--content-background);
 	background-image: url("../images/banner.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
 	height: 200px;
+	transition-duration: 0.5s;
+}
+
+.stackedcontent {
+	align-items: stretch;
+	color: #d0d0e0;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0px;
+}
+
+.stackedcontent a {
+	color: #90c0a8;
+}
+
+.stackedcontent a:visited {
+	color: #709080;
+}
+.stackedcontent div {
+	background-color: #505058;
+	border: solid 2px #404048;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.stackedcontent h4 {
+	color: #f0f0ff;
+}
+
+.stackedcontent div + div {
+	margin-top: 10px;
+}
+
+.stackedcontent li {
+	display: inline;
+}
+
+.stackedcontent li + li::before{
+	content: " / "
+}
+
+.stackedcontent ul {
+	list-style: none;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+	header {
+		background-position: 0 0;
+		justify-content: space-between;
+	}
+
+	nav, nav:hover {
+		position: static;
+		width: 100%;
+	}
+
+	nav div {
+		background: none;
+		border: none;
+		margin: 0px;
+		overflow: none; 
+		width: 100%;
+	}
+
+	nav h3 {
+		display: none;
+	}
+
+	nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	nav li, nav:hover li {
+		left: 0;
+		margin: 8px;
+		overflow: visible;
+		width: 120px;
+	}
+
+	section {
+		margin-right: 20px;
+	}
+
+	.preheader {
+		height: 0px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		flex-flow: column;
+		justify-content: space-around;
+		position: static;
+	}
+	
+	header h1 {
+		margin: 20px 0px 0px 0px;
+	}
+
+	nav ul {
+		justify-content: space-around;
+	}
+
+	.inset {
+		margin: 10px 0 0 0;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	/* Needed if there are 4 nav items
+	header {
+		height: 180px;
+	}*/
+
+	.stackedcontent li {
+		display: list-item;
+		margin-left: 20px;
+	}
+
+	.stackedcontent li + li::before {
+		content: "";
+	}
+
+	.stackedcontent ul {
+		list-style: initial;
+	}
+}
+
+/* Very small screens. */
+@media screen and (max-width: 440px) {
+	header {
+		height: 180px;
+	}
 }
