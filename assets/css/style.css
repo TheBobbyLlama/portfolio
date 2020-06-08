@@ -52,6 +52,7 @@ header {
 	position: sticky;
 	top: 0;
 	width: 100%;
+	z-index: 100;
 }
 
 header::after {
@@ -66,7 +67,6 @@ header::after {
 }
 
 header h1 {
-	/*color: #e0e0f0;*/
 	margin-left: 50px;
 	text-shadow: 0 0 5px var(--content-color);
 	white-space: nowrap;
@@ -167,6 +167,13 @@ section {
 	transition: 1s;
 }
 
+/* clearfix from w3schools.com */
+section::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
 section h2 {
 	display: inline-block;
 	margin-bottom: 4px;
@@ -191,6 +198,11 @@ section:hover {
 
 section:hover h2::after {
 	width: 100%;
+}
+
+section#about img {
+	float: right;
+	margin-top: 10px;
 }
 
 /* Eat any unnecessary spacing. */
@@ -324,6 +336,16 @@ section > *:last-child, .inset > *:last-child {
 
 	nav ul {
 		justify-content: space-around;
+	}
+
+	section h2::after {
+		width: 100%;
+	}
+
+	section#about img {
+		display: block;
+		float: none;
+		margin-top: 0px;
 	}
 
 	section:hover {
