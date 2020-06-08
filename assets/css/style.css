@@ -87,7 +87,7 @@ nav div {
 	align-items: center;
 	background-color: var(--content-background);
 	border: solid 2px var(--content-border);
-	border-radius: 40px;
+	border-radius: 34px;
 	display: flex;
 	justify-content: flex-end;
 	margin: 20px;
@@ -262,7 +262,7 @@ section > *:last-child, .inset > *:last-child {
 
 .showcase div {
 	background-position: center;
-	background-size: 100% 100%;
+	background-size: cover;
 	height: 300px;
 	margin: 10px;
 	overflow: hidden;
@@ -303,7 +303,7 @@ section:hover .showcase div::after {
 }
 
 .showcase-project1 {
-	background-image: url(https://via.placeholder.com/500);
+	background-image: url(https://thebobbyllama.github.io/run-buddy/assets/images/hero-bg.jpg);
 }
 
 .showcase-project2 {
