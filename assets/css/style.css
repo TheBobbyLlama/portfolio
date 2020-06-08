@@ -1,10 +1,8 @@
 :root {
-	--page-background: #c0c0d0;
-	--content-color: #202830;
-	--content-background: #a0a0b0;
-	--content-border: #808088;
-	--inset-background: #9090a0;
-	--inset-border: #707078;
+	--page-background: #202028;
+	--content-color: #e0e0f0;
+	--content-background: #303038;
+	--inset-border: #404048;
 	--button-color: #183828;
 	--button-background: #c8f0d0;
 	--button-border: #709080;
@@ -34,6 +32,7 @@ body {
 }
 
 h1, h2, h3, h4 {
+	color: var(--button-background);
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -67,7 +66,7 @@ header::after {
 }
 
 header h1 {
-	color: #e0e0f0;
+	/*color: #e0e0f0;*/
 	margin-left: 50px;
 	text-shadow: 0 0 5px var(--content-color);
 	white-space: nowrap;
@@ -87,7 +86,7 @@ nav div {
 	align-items: center;
 	background-color: var(--content-background);
 	border: solid 2px var(--content-border);
-	border-radius: 20px;
+	border-radius: 40px;
 	display: flex;
 	justify-content: flex-end;
 	margin: 20px;
@@ -106,6 +105,7 @@ nav a, nav a:visited {
 }
 
 nav h3 {
+	color: var(--content-color);
 	font-size: 20px;
 	margin-left: 20px;
 	order: 2;
@@ -144,6 +144,7 @@ nav:hover {
 }
 
 nav:hover div {
+	border-radius: 20px;
 	padding-left: 10px;
 	width: 100%;
 }
@@ -159,11 +160,37 @@ nav:hover li {
 }
 
 section {
-	background-color: var(--content-background);
-	border: solid 2px var(--content-border);
-	border-radius: 20px;
+	background-color: transparent;
+	border-radius: 4px;
 	margin: 20px var(--nav-width) 20px 20px;
-	padding: 20px;
+	padding: 10px 20px 20px 20px;
+	transition: 1s;
+}
+
+section h2 {
+	display: inline-block;
+	margin-bottom: 4px;
+	position: relative;
+}
+
+section h2::after {
+	border-bottom: solid 4px var(--button-background);
+	bottom: -2px;
+	content: "";
+	display: block;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	transition: 0.5s;
+	width: 0%;
+}
+
+section:hover {
+	background-color: var(--content-background);
+}
+
+section:hover h2::after {
+	width: 100%;
 }
 
 /* Eat any unnecessary spacing. */
@@ -172,9 +199,9 @@ section > *:last-child, .inset > *:last-child {
 }
 
 .inset {
-	background-color: var(--inset-background);
+	background-color: var(--page-background);
 	border: solid 2px var(--inset-border);
-	border-radius: 14px;
+	border-radius: 10px;
 	margin: 20px;
 	padding: 14px;
 }
@@ -205,17 +232,20 @@ section > *:last-child, .inset > *:last-child {
 }
 .stackedcontent div {
 	background-color: #505058;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 30%;
 	border: solid 2px #404048;
 	border-radius: 10px;
-	padding: 10px;
-}
-
-.stackedcontent h4 {
-	color: #f0f0ff;
+	padding: 10px 30% 10px 10px;
 }
 
 .stackedcontent div + div {
 	margin-top: 10px;
+}
+
+.stackedcontent h4 {
+	color: #f0f0ff;
 }
 
 .stackedcontent li {
@@ -228,6 +258,14 @@ section > *:last-child, .inset > *:last-child {
 
 .stackedcontent ul {
 	list-style: none;
+}
+
+.dwemermatron {
+	background-image: url(../images/skyrim-dwemermatron.jpg);
+}
+
+.reincarnation {
+	background-image: url(../images/skyrim-reincarnation.jpg);
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -288,6 +326,10 @@ section > *:last-child, .inset > *:last-child {
 		justify-content: space-around;
 	}
 
+	section:hover {
+		background-color: transparent;
+	}
+
 	.inset {
 		margin: 10px 0 0 0;
 	}
@@ -303,8 +345,16 @@ section > *:last-child, .inset > *:last-child {
 /*		height: 180px;   Will be needed again if there are 4 nav items. */
 	}
 
+	section {
+		margin: 10px;
+	}
+
 	.preheader {
 		display: none;
+	}
+
+	.stackedcontent div {
+		padding: 10px;
 	}
 
 	.stackedcontent li {
@@ -318,6 +368,28 @@ section > *:last-child, .inset > *:last-child {
 
 	.stackedcontent ul {
 		list-style: initial;
+	}
+
+	.dwemermatron, .reincarnation {
+		background-image: none;
+	}
+
+	.dwemermatron h4, .reincarnation h4 {
+		background-position: center;
+		background-size: cover;
+		color: transparent;
+		display: block;
+		margin: 0px auto;
+		padding-top: 75%;
+		width: 100%;
+	}
+
+	.dwemermatron h4 {
+		background-image: url(../images/skyrim-dwemermatron.jpg);
+	}
+
+	.reincarnation h4 {
+		background-image: url(../images/skyrim-reincarnation.jpg);
 	}
 }
 
