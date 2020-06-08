@@ -1,7 +1,8 @@
 :root {
-	--page-background: #202028;
+	--page-background: #181820;
 	--content-color: #e0e0f0;
 	--content-background: #303038;
+	--inset-background: #505058;
 	--inset-border: #404048;
 	--button-color: #183828;
 	--button-background: #c8f0d0;
@@ -28,7 +29,7 @@ a:visited {
 body {
 	background-color: var(--page-background);
 	color: var(--content-color);
-	font-family: 'Nunito', sans-serif;
+	font-family: sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -56,19 +57,19 @@ header {
 }
 
 header::after {
-    content: "";
+	background: linear-gradient(transparent, var(--page-background));
+	content: "";
     height: 100%;
-    width: 100%;
-    background: linear-gradient(transparent, var(--page-background));
-    position: absolute;
-    top: 0;
 	left: 0;
+	position: absolute;
+    top: 0;
+	width: 100%;
 	z-index: -1;
 }
 
 header h1 {
 	margin-left: 50px;
-	text-shadow: 0 0 5px var(--content-color);
+	text-shadow: 0 0 5px var(--page-background);
 	white-space: nowrap;
 }
 
@@ -159,6 +160,10 @@ nav:hover li {
 	width: 100%;
 }
 
+p + p {
+	margin-top: 8px;
+}
+
 section {
 	background-color: transparent;
 	border-radius: 4px;
@@ -202,7 +207,9 @@ section:hover h2::after {
 
 section#about img {
 	float: right;
-	margin-top: 10px;
+	height: 300px;
+	margin: 10px 0px 10px 10px;
+	width: 300px;
 }
 
 /* Eat any unnecessary spacing. */
@@ -227,6 +234,94 @@ section > *:last-child, .inset > *:last-child {
 	height: 200px;
 }
 
+.showcase {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	transition: 0.5s;
+}
+
+.showcase a {
+	display: block;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	z-index: 5;
+}
+
+.showcase a h3 {
+	bottom: 4px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+	text-shadow: 0 0 5px var(--page-background);
+	transition: 0.5s;
+}
+
+.showcase div {
+	background-position: center;
+	background-size: 100% 100%;
+	height: 300px;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+	transition: 0.5s;
+	width: 300px;
+}
+
+.showcase div:hover {
+	height: 320px;
+	margin: 0px;
+	width: 320px;
+}
+
+.showcase div:hover h3 {
+	font-size: 22px;
+}
+
+.showcase div::after {
+	background: linear-gradient(transparent, var(--page-background));
+	bottom: 0px;
+    content: "";
+	height: 100%;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	transition: 0.5s;
+	width: 100%;
+}
+
+.showcase div:hover::after {
+	opacity: 0;
+}
+
+section:hover .showcase div::after {
+	background: linear-gradient(transparent, var(--content-background));
+	transition: 0.5s;
+}
+
+.showcase-project1 {
+	background-image: url(https://via.placeholder.com/500);
+}
+
+.showcase-project2 {
+	background-image: url(https://via.placeholder.com/500);
+}
+.showcase-project3 {
+	background-image: url(https://via.placeholder.com/500);
+}
+.showcase-project4 {
+	background-image: url(https://via.placeholder.com/500);
+}
+.showcase-project5 {
+	background-image: url(https://via.placeholder.com/500);
+}
+.showcase-project6 {
+	background-image: url(https://via.placeholder.com/500);
+}
+
 .stackedcontent {
 	align-items: stretch;
 	color: #d0d0e0;
@@ -243,12 +338,12 @@ section > *:last-child, .inset > *:last-child {
 	color: #709080;
 }
 .stackedcontent div {
-	background-color: #505058;
+	background-color: var(--inset-background);;
 	background-position: right center;
 	background-repeat: no-repeat;
 	background-size: 30%;
-	border: solid 2px #404048;
-	border-radius: 10px;
+	border: solid 2px var(--inset-border);
+	border-radius: 6px;
 	padding: 10px 30% 10px 10px;
 }
 
@@ -258,6 +353,8 @@ section > *:last-child, .inset > *:last-child {
 
 .stackedcontent h4 {
 	color: #f0f0ff;
+	font-size: 18px;
+	margin-bottom: 4px;
 }
 
 .stackedcontent li {
@@ -345,7 +442,8 @@ section > *:last-child, .inset > *:last-child {
 	section#about img {
 		display: block;
 		float: none;
-		margin-top: 0px;
+		margin: 0px auto;
+		object-fit: contain;
 	}
 
 	section:hover {
@@ -358,6 +456,10 @@ section > *:last-child, .inset > *:last-child {
 
 	.preheader {
 		background-position: 0px 0px;
+	}
+
+	.showcase {
+		justify-content: space-around;
 	}
 }
 
@@ -420,5 +522,10 @@ section > *:last-child, .inset > *:last-child {
 	header {
 		background-position: 0px 0px;
 		height: 180px;
+	}
+
+	.showcase div, .showcase div:hover {
+		height: 240px;
+		width: 240px;
 	}
 }
