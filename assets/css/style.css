@@ -181,7 +181,7 @@ section::after {
 
 section h2 {
 	display: inline-block;
-	margin-bottom: 4px;
+	margin-bottom: 10px;
 	position: relative;
 }
 
@@ -205,6 +205,10 @@ section:hover h2::after {
 	width: 100%;
 }
 
+section#about {
+	position: relative;
+}
+
 section#about img {
 	float: right;
 	height: 300px;
@@ -215,6 +219,11 @@ section#about img {
 /* Eat any unnecessary spacing. */
 section > *:last-child, .inset > *:last-child {
 	margin-bottom: 0px;
+}
+
+.contact-info {
+	position: absolute;
+	bottom: 28px;
 }
 
 .inset {
@@ -297,6 +306,14 @@ section > *:last-child, .inset > *:last-child {
 	opacity: 0;
 }
 
+.showcase div:first-child {
+	width: 620px;
+}
+
+.showcase div:first-child:hover {
+	width: 640px;
+}
+
 section:hover .showcase div::after {
 	background: linear-gradient(transparent, var(--content-background));
 	transition: 0.5s;
@@ -338,13 +355,18 @@ section:hover .showcase div::after {
 	color: #709080;
 }
 .stackedcontent div {
-	background-color: var(--inset-background);;
+	background-color: var(--page-background);
 	background-position: right center;
 	background-repeat: no-repeat;
 	background-size: 30%;
 	border: solid 2px var(--inset-border);
 	border-radius: 6px;
 	padding: 10px 30% 10px 10px;
+	transition: 0.5s;
+}
+
+.stackedcontent div:hover {
+	background-color: var(--content-background);
 }
 
 .stackedcontent div + div {
@@ -435,6 +457,10 @@ section:hover .showcase div::after {
 		justify-content: space-around;
 	}
 
+	section {
+		padding-bottom: 10px;
+	}
+
 	section h2::after {
 		width: 100%;
 	}
@@ -442,12 +468,17 @@ section:hover .showcase div::after {
 	section#about img {
 		display: block;
 		float: none;
-		margin: 0px auto;
-		object-fit: contain;
+		margin: 10px 0px;
 	}
 
 	section:hover {
 		background-color: transparent;
+	}
+
+	.contact-info {
+		bottom: 0;
+		position: static;
+		margin-top: 10px;
 	}
 
 	.inset {
@@ -463,6 +494,12 @@ section:hover .showcase div::after {
 	}
 }
 
+@media screen and (max-width: 700px) {
+	.showcase div:first-child, .showcase div:first-child:hover {
+		width: 500px;
+	}
+}
+
 @media screen and (max-width: 575px) {
 	header {
 		background-position: 0px -100px;
@@ -470,14 +507,24 @@ section:hover .showcase div::after {
 	}
 
 	section {
+		background-color: var(--content-background);
 		margin: 10px;
+	}
+
+	.inset {
+		margin: 10px -10px 0px -10px;
 	}
 
 	.preheader {
 		display: none;
 	}
 
+	.showcase div:first-child, .showcase div:first-child:hover {
+		width: 100%;
+	}
+
 	.stackedcontent div {
+		background-color: var(--content-background);
 		padding: 10px;
 	}
 
@@ -522,6 +569,11 @@ section:hover .showcase div::after {
 	header {
 		background-position: 0px 0px;
 		height: 180px;
+	}
+
+	section#about img {
+		height: auto;
+		width: 100%;
 	}
 
 	.showcase div, .showcase div:hover {
