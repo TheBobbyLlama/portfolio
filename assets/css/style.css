@@ -216,6 +216,10 @@ section#about img {
 	width: 300px;
 }
 
+section#about li {
+	margin-left: 20px;
+}
+
 /* Eat any unnecessary spacing. */
 section > *:last-child, .inset > *:last-child {
 	margin-bottom: 0px;
