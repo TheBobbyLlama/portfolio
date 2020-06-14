@@ -30,6 +30,7 @@ body {
 	background-color: var(--page-background);
 	color: var(--content-color);
 	font-family: sans-serif;
+	margin-bottom: 80px; /* Space at the bottom for the Contact panel. */
 }
 
 h1, h2, h3, h4 {
@@ -220,14 +221,52 @@ section#about li {
 	margin-left: 20px;
 }
 
+/* SPECIAL HANDLING FOR CONTACT INFO */
+/* This will stick to the bottom of the screen once the user starts scrolling down. */
+section#contact-info {
+	background-color: var(--button-background);
+	border-radius: 0px;
+	border-top: solid 4px var(--button-border);
+	bottom: -60px;
+	color: var(--page-background);
+	height: 60px;;
+	left: 0px;
+	margin: 0px;
+	position: fixed;
+	right: 0px;
+	transition: 0.5s;
+	z-index: 10;
+}
+
+section#contact-info h2 {
+	color: var(--content-background);
+	margin-left: 20px;
+}
+
+section#contact-info li {
+	margin: 0px 14px;
+}
+
+section#contact-info li:first-child {
+	list-style-type: none;
+}
+
+section#contact-info ul {
+	display: inline-flex;
+}
+
+/* Applied with JS for the Contact panel to slide in from the bottom of the screen. */
+section#contact-info.fly-in {
+	bottom: 0px;
+}
+
 /* Eat any unnecessary spacing. */
 section > *:last-child, .inset > *:last-child {
 	margin-bottom: 0px;
 }
 
-.contact-info {
-	position: absolute;
-	bottom: 28px;
+.contact-nav {
+	display: none;
 }
 
 .inset {
@@ -403,8 +442,16 @@ section:hover .showcase div::after {
 	background-image: url(../images/skyrim-reincarnation.jpg);
 }
 
+.rmao {
+	background-image: url(../images/skyrim-RMAO.gif);
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+	body {
+		margin: 0px;
+	}
+
 	header {
 		justify-content: space-between;
 	}
@@ -442,6 +489,33 @@ section:hover .showcase div::after {
 	section {
 		margin-right: 20px;
 	}
+
+	/* All that special handling for the Contact panel needs to be reverted so it's a normal section now. */
+	section#contact-info {
+		background-color: transparent;
+		border-radius: 4px;
+		border-top: none;
+		bottom: 0px;
+		color: inherit;
+		height: auto;
+		margin: 20px;
+		position: static;
+		transition: 1s;
+		z-index: 0;
+	}
+	
+	section#contact-info h2 {
+		color: var(--button-background);
+		margin-left: 0px;
+	}
+
+	section#contact-info:hover {
+		background-color: var(--content-background);
+	}
+	
+	.contact-nav {
+		display: list-item;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -461,7 +535,7 @@ section:hover .showcase div::after {
 		justify-content: space-around;
 	}
 
-	section {
+	section, section#contact-info {
 		padding-bottom: 10px;
 	}
 
@@ -475,15 +549,10 @@ section:hover .showcase div::after {
 		margin: 10px 0px;
 	}
 
-	section:hover {
+	section:hover, section#contact-info:hover {
 		background-color: transparent;
 	}
 
-	.contact-info {
-		bottom: 0;
-		position: static;
-		margin-top: 10px;
-	}
 
 	.inset {
 		margin: 10px 0 0 0;
@@ -507,12 +576,29 @@ section:hover .showcase div::after {
 @media screen and (max-width: 575px) {
 	header {
 		background-position: 0px -100px;
-/*		height: 180px;   Will be needed again if there are 4 nav items. */
+		height: 180px;
 	}
 
-	section {
+	section, section#contact-info {
 		background-color: var(--content-background);
 		margin: 10px;
+	}
+
+	section:hover, section#contact-info:hover {
+		background-color: var(--content-background);
+	}
+
+	/* Revert contact info list to a standard vertical layout. */
+	section#contact-info li {
+		margin-left: 20px;
+	}
+	
+	section#contact-info li:first-child {
+		list-style-type: initial;
+	}
+	
+	section#contact-info ul {
+		display: initial;
 	}
 
 	.inset {
@@ -545,11 +631,11 @@ section:hover .showcase div::after {
 		list-style: initial;
 	}
 
-	.dwemermatron, .reincarnation {
+	.dwemermatron, .reincarnation, .rmao {
 		background-image: none;
 	}
 
-	.dwemermatron h4, .reincarnation h4 {
+	.dwemermatron h4, .reincarnation h4, .rmao h4 {
 		background-position: center;
 		background-size: cover;
 		color: transparent;
@@ -566,13 +652,16 @@ section:hover .showcase div::after {
 	.reincarnation h4 {
 		background-image: url(../images/skyrim-reincarnation.jpg);
 	}
+
+	.rmao h4 {
+		background-image: url(../images/skyrim-RMAO.gif);
+	}
 }
 
 /* Very small screens. */
 @media screen and (max-width: 440px) {
 	header {
 		background-position: 0px 0px;
-		height: 180px;
 	}
 
 	section#about img {

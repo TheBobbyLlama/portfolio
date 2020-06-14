@@ -18,6 +18,7 @@
 						<li><a href="#about">About Me</a></li>
 						<li><a href="#web">Web Projects</a></li>
 						<li><a href="#other">Other Projects</a></li>
+						<li class="contact-nav"><a href="#contact-info">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -27,12 +28,10 @@
 			<img src="./assets/images/bfeuerstein.jpg" alt="Bob Feuerstein" />
 			<ul>
 				<li>Software development background - C#.</li>
+				<li>Proficient in HTML, CSS, &amp; Javascript</li>
 				<li>Willing to relocate or work remotely.</li>
 				<li>Hobbies include gaming, tinkering with games, travel, and spending time with nieces!</li>
 			</ul>
-			<p class="contact-info">
-				<strong>Contact me:</strong> <a href="mailto:thebobbyllama@yahoo.com">thebobbyllama@yahoo.com</a>
-			</p>
 		</section>
 		<section id="web">
 			<h2>Web Projects</h2>
@@ -99,6 +98,20 @@
 							</li>
 						</ul>
 					</div>
+					<div class="rmao">
+						<h4>RaceMenu - Animated Overlays</h4>
+						<p>
+							Choose skin overlays from the RaceMenu mod to fade in when you're engaged in combat.
+						</p>
+						<ul>
+							<li>
+								<a href="https://www.nexusmods.com/skyrimspecialedition/mods/37275" target=_blank">Special Edition</a>
+							</li>
+							<li>
+								<a href="https://www.nexusmods.com/skyrim/mods/103401" target="_blank">Classic</a>
+							</li>
+						</ul>
+					</div>
 					<div>
 						<ul>
 							<li>
@@ -109,7 +122,26 @@
 				</div>
 			</div>
 		</section>
+		<section id="contact-info">
+			<h2>Contact Me</h2>
+			<ul>
+				<li><a href="mailto:thebobbyllama@yahoo.com">Email</a></li>
+				<li><a href="https://www.linkedin.com/in/bob-feuerstein/" target="_blank">LinkedIn</a></li>
+			</ul>
+		</section>
 	</body>
-<!-- HACK - this prevents Chrome's transition on page load bug. -->
-<script> </script>
+<script type="text/javascript">
+var docPage = document.querySelector("html");
+var contactInfo = document.querySelector("#contact-info");
+
+var ScrollMe = function() {
+	if (docPage.scrollTop > 200) {
+		contactInfo.className = "fly-in";
+	} else {
+		contactInfo.className = "";
+	}
+}
+
+document.addEventListener("scroll", ScrollMe);
+</script>
 </html>
