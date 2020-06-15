@@ -631,6 +631,10 @@ section:hover .showcase div::after {
 		list-style: initial;
 	}
 
+	.stackedcontent p {
+		margin: 10px 0px;
+	}
+
 	.dwemermatron, .reincarnation, .rmao {
 		background-image: none;
 	}
