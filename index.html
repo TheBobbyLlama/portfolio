@@ -101,7 +101,7 @@
 					<div class="rmao">
 						<h4>RaceMenu - Animated Overlays</h4>
 						<p>
-							Choose skin overlays from the RaceMenu mod to fade in when you're engaged in combat.
+							Choose skin overlays to fade in while in combat, for effects like glowing rune tattoos.
 						</p>
 						<ul>
 							<li>
@@ -137,8 +137,7 @@ var contactInfo = document.querySelector("#contact-info");
 var ScrollMe = function() {
 	if (docPage.scrollTop > 200) {
 		contactInfo.className = "fly-in";
-	} else {
-		contactInfo.className = "";
+		document.removeEventListener("scroll", ScrollMe);
 	}
 }
 
