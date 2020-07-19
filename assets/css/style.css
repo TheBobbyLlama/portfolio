@@ -293,9 +293,11 @@ section > *:last-child, .inset > *:last-child {
 	transition: 0.5s;
 }
 
-.showcase a {
-	display: block;
+.showcase > div > a {
+	display: flex;
+	flex-direction: column;
 	height: 100%;
+	justify-content: flex-end;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -303,13 +305,18 @@ section > *:last-child, .inset > *:last-child {
 	z-index: 5;
 }
 
-.showcase a h3 {
-	bottom: 4px;
-	left: 0px;
-	position: absolute;
-	right: 0px;
+.showcase h3, .showcase p {
+	color: var(--button-background);
+	padding: 0 20px;
+	position: relative;
 	text-shadow: 0 0 5px var(--page-background);
 	transition: 0.5s;
+}
+
+.showcase p {
+	max-height: 0px;
+	overflow: hidden;
+	transition: background-color 0.5s, max-height 1s;
 }
 
 .showcase div {
@@ -330,7 +337,14 @@ section > *:last-child, .inset > *:last-child {
 }
 
 .showcase div:hover h3 {
+	background-color: var(--content-background);
 	font-size: 22px;
+	margin-top: 4px;
+}
+
+.showcase div:hover p {
+	background-color: var(--content-background);
+	max-height: 200px;
 }
 
 .showcase div::after {
@@ -357,13 +371,29 @@ section > *:last-child, .inset > *:last-child {
 	width: 640px;
 }
 
+.showcase *.githubButton {
+	background-color: var(--button-background);
+	border: solid 2px var(--button-border);
+	border-radius: 4px;
+	position: absolute;
+	padding: 2px 8px;
+	right: 2px;
+	top: -50px;
+	transition: 0.5s;
+	z-index: 10;
+}
+
+.showcase div:hover *.githubButton {
+	top: 2px;
+}
+
 section:hover .showcase div::after {
 	background: linear-gradient(transparent, var(--content-background));
 	transition: 0.5s;
 }
 
-.showcase-project1 {
-	background-image: url(https://thebobbyllama.github.io/run-buddy/assets/images/hero-bg.jpg);
+.showcase-hopto {
+	background-image: url(https://user-images.githubusercontent.com/64815650/87613461-00ada300-c6d3-11ea-92d9-47cded5c1550.png?raw=true);
 }
 
 .showcase-project2 {
@@ -515,6 +545,20 @@ section:hover .showcase div::after {
 	
 	.contact-nav {
 		display: list-item;
+	}
+
+	.showcase div h3 {
+		background-color: var(--content-background);
+		font-size: 22px;
+	}
+	
+	.showcase div p {
+		background-color: var(--content-background);
+		max-height: 500px;
+	}
+
+	.showcase div *.githubButton {
+		top: 2px;
 	}
 }
 
