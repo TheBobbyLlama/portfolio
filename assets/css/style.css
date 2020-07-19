@@ -376,7 +376,6 @@ section > *:last-child, .inset > *:last-child {
 	border: solid 2px var(--button-border);
 	border-radius: 4px;
 	position: absolute;
-	padding: 2px 8px;
 	right: 2px;
 	top: -50px;
 	transition: 0.5s;
@@ -385,6 +384,15 @@ section > *:last-child, .inset > *:last-child {
 
 .showcase div:hover *.githubButton {
 	top: 2px;
+}
+
+.showcase div:hover *.githubButton a {
+	display: block;
+	padding: 2px 8px;
+}
+
+.githubButton:hover {
+	background-color: var(--button-highlight);
 }
 
 section:hover .showcase div::after {
