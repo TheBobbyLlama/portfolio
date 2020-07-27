@@ -36,43 +36,37 @@
 		<section id="web">
 			<h2>Web Projects</h2>
 			<div class="showcase">
-				<div class="showcase-hopto">
-					<span class="githubButton"><a href="https://github.com/laurenceokite/hop-to" target="_blank">Github</a></span>
+				<div id="Hop To" class="showcase-hopto">
 					<a href="https://laurenceokite.github.io/hop-to/" target="_blank">
 						<h3>Hop To</h3>
-						<p>Find breweries either in your hometown or while on vacation, and plan a trip to see them!</p>
+						<p></p>
 					</a>
 				</div>
-				<div class="showcase-esorp">
-					<span class="githubButton"><a href="https://github.com/TheBobbyLlama/eso-roleplay" target="_blank">Github</a></span>
+				<div id="ESO Roleplay" class="showcase-esorp">
 					<a href="https://thebobbyllama.github.io/eso-roleplay/" target="_blank">
 						<h3>ESO Roleplay</h3>
-						<p>A character tracking and dice roll system to facillitate roleplaying in the game The Elder Scrolls Online.</p>
+						<p></p>
 					</a>
 				</div>
 				<div class="showcase-project3">
-					<span class="githubButton"><a href="#" target="_blank">Github</a></span>
 					<a href="about:blank" target="_blank">
 						<h3>Project 3</h3>
 						<p>Description text will go here.</p>
 					</a>
 				</div>
 				<div class="showcase-project4">
-					<span class="githubButton"><a href="#" target="_blank">Github</a></span>
 					<a href="about:blank" target="_blank">
 						<h3>Project 4</h3>
 						<p>Description text will go here.</p>
 					</a>
 				</div>
 				<div class="showcase-project5">
-					<span class="githubButton"><a href="#" target="_blank">Github</a></span>
 					<a href="about:blank" target="_blank">
 						<h3>Project 5</h3>
 						<p>Description text will go here.</p>
 					</a>
 				</div>
 				<div class="showcase-project6">
-					<span class="githubButton"><a href="#" target="_blank">Github</a></span>
 					<a href="about:blank" target="_blank">
 						<h3>Project 6</h3>
 						<p>Description text will go here.</p>
@@ -142,18 +136,22 @@
 				<li><a href="https://github.com/TheBobbyLlama/" target="_blank">Github</a></li>
 			</ul>
 		</section>
+		<div id="modalBG">
+			<div id="previewModal">
+				<h2>Title</h2>
+				<p>Description</p>
+				<p>Detailed Description</p>
+				<div>
+					<a href="about:blank" target="_blank">Link</a>
+				</div>
+				<iframe></iframe>
+				<div>
+					<button type="button" id="modalGithubButton">Github</button>
+					<button type="button" id="modalCloseButton">Close</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="assets/js/script.js"></script>
 	</body>
-<script type="text/javascript">
-var docPage = document.querySelector("html");
-var contactInfo = document.querySelector("#contact-info");
-
-var ScrollMe = function() {
-	if (docPage.scrollTop > 200) {
-		contactInfo.className = "fly-in";
-		document.removeEventListener("scroll", ScrollMe);
-	}
-}
-
-document.addEventListener("scroll", ScrollMe);
-</script>
 </html>

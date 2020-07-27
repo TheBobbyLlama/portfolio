@@ -118,21 +118,26 @@ nav h3 {
 	writing-mode: vertical-rl;
 }
 
-nav li {
+nav li, #modalBG button {
 	background-color: var(--button-background);
 	border: solid 2px var(--button-border);
 	border-radius: 6px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+nav li {
 	left: -100px;
 	margin: 8px 0px 8px 0px;
 	overflow: hidden;
 	position: relative;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
-	white-space: nowrap;
 	width: 0px;
+
 }
 
-nav li:hover {
+nav li:hover, #modalBG button:hover {
 	background-color: var(--button-highlight);
 }
 
@@ -371,30 +376,6 @@ section > *:last-child, .inset > *:last-child {
 	width: 640px;
 }
 
-.showcase *.githubButton {
-	background-color: var(--button-background);
-	border: solid 2px var(--button-border);
-	border-radius: 4px;
-	position: absolute;
-	right: 2px;
-	top: -50px;
-	transition: 0.5s;
-	z-index: 10;
-}
-
-.showcase div:hover *.githubButton {
-	top: 2px;
-}
-
-.showcase div:hover *.githubButton a {
-	display: block;
-	padding: 2px 8px;
-}
-
-.githubButton:hover {
-	background-color: var(--button-highlight);
-}
-
 section:hover .showcase div::after {
 	background: linear-gradient(transparent, var(--content-background));
 	transition: 0.5s;
@@ -484,6 +465,83 @@ section:hover .showcase div::after {
 	background-image: url(../images/skyrim-RMAO.gif);
 }
 
+#modalBG {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.75);
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+}
+
+.show {
+	display: block !important;
+}
+
+#modalBG.show {
+	display: flex !important;
+}
+
+#modalBG > div {
+	background-color: var(--content-background);
+	border: solid 2px var(--page-background);
+	border-radius: 10px;
+	display: none;
+	margin: 20px;
+	max-height: 100%;
+	overflow: auto;
+	padding: 10px 20px;
+	width: 80%;
+}
+
+#modalBG > div > div:last-child {
+	display: flex;
+	justify-content: center;
+}
+
+#modalBG button {
+	margin: 10px;
+	padding: 2px 8px;
+}
+
+#modalBG h2 {
+	text-align: center;
+}
+
+#modalBG a {
+	color: var(--button-background);
+	margin: 10px;
+}
+
+#modalBG > div > div {
+	text-align: center;
+}
+
+#modalBG a:hover {
+	color: var(--button-highlight);
+}
+
+#modalBG li {
+	margin-left: 20px;
+}
+
+#modalBG p, #modalBG ul {
+	margin: 10px;
+}
+
+#modalBG iframe {
+	border: none;
+	border-radius: 8px;
+	display: block;
+	height: 600px;
+	margin: 10px 0px;
+	width: 100%;
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
 	body {
@@ -565,8 +623,12 @@ section:hover .showcase div::after {
 		max-height: 500px;
 	}
 
-	.showcase div *.githubButton {
-		top: 2px;
+	#modalBG > div {
+		width: 90%;
+	}
+
+	#modalBG iframe {
+		height: 400px;
 	}
 }
 
@@ -711,6 +773,16 @@ section:hover .showcase div::after {
 
 	.rmao h4 {
 		background-image: url(../images/skyrim-RMAO.gif);
+	}
+
+	#modalBG > div {
+		margin: 10px;
+		padding: 10px;
+		width: 100%;
+	}
+
+	#modalBG iframe {
+		height: 300px;
 	}
 }
 
