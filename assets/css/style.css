@@ -365,7 +365,7 @@ section > *:last-child, .inset > *:last-child {
 }
 
 .showcase div:hover::after {
-	opacity: 0;
+	bottom: -100%;
 }
 
 .showcase div:first-child {
@@ -388,9 +388,11 @@ section:hover .showcase div::after {
 .showcase-esorp {
 	background-image: url(https://github.com/TheBobbyLlama/eso-roleplay/blob/master/charsheet.png?raw=true);
 }
-.showcase-project3 {
-	background-image: url(https://via.placeholder.com/500);
+.showcase-pagebound {
+	background-image: url(https://github.com/TheBobbyLlama/pagebound/blob/master/Snapshot.png?raw=true);
 }
+
+/*
 .showcase-project4 {
 	background-image: url(https://via.placeholder.com/500);
 }
@@ -399,7 +401,7 @@ section:hover .showcase div::after {
 }
 .showcase-project6 {
 	background-image: url(https://via.placeholder.com/500);
-}
+}*/
 
 .stackedcontent {
 	align-items: stretch;
@@ -514,15 +516,22 @@ section:hover .showcase div::after {
 
 #modalBG a {
 	color: var(--button-background);
+}
+
+#modalBG a:visited {
+	opacity: 0.75;
+}
+
+#modalBG a:hover {
+	color: var(--button-highlight);
+}
+
+#modalBG .linkholder a {
 	margin: 10px;
 }
 
 #modalBG > div > div {
 	text-align: center;
-}
-
-#modalBG a:hover {
-	color: var(--button-highlight);
 }
 
 #modalBG li {
