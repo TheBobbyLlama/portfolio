@@ -19,7 +19,7 @@ const projectInfo = [
 		github: "https://github.com/TheBobbyLlama/pagebound"
 	},
 	{
-		name: "ESO Roleplay",
+		name: "ESO Rollplay",
 		description: `A character tracking and dice roll system to facillitate roleplaying in the game The Elder Scrolls Online.`,
 		details: `<p>This is the player portal page which consists of 3 subpages:</p>
 		<ul>
@@ -27,9 +27,9 @@ const projectInfo = [
 			<li>A 'Rollplay' page where players can participate in roleplaying sessions by making dice rolls.</li>
 			<li>A profile page where characters can be browsed and viewed.</li>
 		</ul>
-		<p>ESO Roleplay was made with HTML/CSS/Javascript/JQuery, and uses <a href="https://firebase.google.com/" target="_blank">Google Firebase</a> to store data.</p>`,
-		link: "https://thebobbyllama.github.io/eso-roleplay/",
-		github: "https://github.com/TheBobbyLlama/eso-roleplay",
+		<p>ESO Rollplay was made with HTML/CSS/Javascript/JQuery, and uses <a href="https://firebase.google.com/" target="_blank">Google Firebase</a> to store data.</p>`,
+		link: "https://eso-rollplay.net/",
+		github: "https://github.com/TheBobbyLlama/eso-rollplay",
 	},
 ];
 
