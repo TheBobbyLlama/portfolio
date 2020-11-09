@@ -3,6 +3,15 @@ const contactInfo = $("#contact-info");
 
 const projectInfo = [
 	{
+		id: "projectivity",
+		name: "Projectivity",
+		description: `Track your projects and manage timesheets in this all-in-one productivity solution.`,
+		details: `<p>Projectivity was the final group project of UW Coding Bootcamp.  I primarily worked on the Groups page and the time tracker widget, as well as backend query support and creating the site's logo.</p>
+		<p>This is a full stack MERN application - Mongo, Express, React, and Node.  Other technologies used include JSON Web Tokens, GraphQL, and Apollo Client/Server</p>`,
+		link: "https://evening-dawn-14533.herokuapp.com/",
+		github: "https://github.com/alexo-a/projectivity",
+	},
+	{
 		name: "Hop To",
 		description: `Find breweries either in your hometown or while on vacation, and plan a trip to see them!`,
 		details: `<p>Hop To is a group project from UW Coding Bootcamp.  My responsibilities for the project were the Bing Maps display and tour selection/routing.  I also created most of the custom icons for the project.<p>

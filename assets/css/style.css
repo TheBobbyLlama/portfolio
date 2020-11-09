@@ -392,16 +392,10 @@ section:hover .showcase div::after {
 	background-image: url(https://github.com/TheBobbyLlama/pagebound/blob/master/Snapshot.png?raw=true);
 }
 
-/*
-.showcase-project4 {
-	background-image: url(https://via.placeholder.com/500);
+/* TODO - Better screenshot to come. */
+.showcase-projectivity {
+	background-image: url(https://github.com/alexo-a/projectivity/blob/main/client/public/logo512.png?raw=true);
 }
-.showcase-project5 {
-	background-image: url(https://via.placeholder.com/500);
-}
-.showcase-project6 {
-	background-image: url(https://via.placeholder.com/500);
-}*/
 
 .stackedcontent {
 	align-items: stretch;
@@ -543,6 +537,7 @@ section:hover .showcase div::after {
 }
 
 #modalBG iframe {
+	background-color: white;
 	border: none;
 	border-radius: 8px;
 	display: block;
