@@ -30,12 +30,7 @@ const projectInfo = [
 	{
 		name: "ESO Rollplay",
 		description: `A character tracking and dice roll system to facillitate roleplaying in the game The Elder Scrolls Online.`,
-		details: `<p>This is the player portal page which consists of 3 subpages:</p>
-		<ul>
-			<li>A character sheet page where players can create and save their characters for use in the system.</li>
-			<li>A 'Rollplay' page where players can participate in roleplaying sessions by making dice rolls.</li>
-			<li>A profile page where characters can be browsed and viewed.</li>
-		</ul>
+		details: `<p>This site functions much like what you might see in tabletop Dungeons &amp; Dragons.  Players create and save their character sheets, and then Game Masters create and run sessions for other players to join with their characters.</p>
 		<p>ESO Rollplay was made with HTML/CSS/Javascript/JQuery, and uses <a href="https://firebase.google.com/" target="_blank">Google Firebase</a> to store data.</p>`,
 		link: "https://eso-rollplay.net/",
 		github: "https://github.com/TheBobbyLlama/eso-rollplay",
