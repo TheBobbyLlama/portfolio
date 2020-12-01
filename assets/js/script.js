@@ -6,7 +6,7 @@ const projectInfo = [
 		id: "projectivity",
 		name: "Projectivity",
 		description: `Track your projects and manage timesheets in this all-in-one productivity solution.`,
-		details: `<p>Projectivity was the final group project of UW Coding Bootcamp.  I primarily worked on the Groups page and the time tracker widget, as well as backend query support and creating the site's logo.</p>
+		details: `<p>Projectivity was the final group project of UW Coding Bootcamp.  I did the Groups and Timesheets pages, the Conversations and Time Tracker widgets, much of the backend query support, and I also created the site's logo.</p>
 		<p>This is a full stack MERN application - Mongo, Express, React, and Node.  Other technologies used include JSON Web Tokens, GraphQL, and Apollo Client/Server</p>`,
 		link: "https://evening-dawn-14533.herokuapp.com/",
 		github: "https://github.com/alexo-a/projectivity",
