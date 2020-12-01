@@ -94,9 +94,16 @@ const hidePopup = function() {
 	$("#previewModal iframe").attr("src", "about:blank");
 }
 
+const modalBGClick = function(event) {
+	if (event.target.id === "modalBG") {
+		hidePopup();
+	}
+}
+
 document.addEventListener("scroll", scrollMe);
 $(".showcase > div").on("click", showProject);
 $("#modalGithubButton").on("click", launchProjectGithub);
 $("#modalCloseButton, #modalBG a").on("click", hidePopup);
+$("#modalBG").on("click", modalBGClick);
 
 initializePage();
