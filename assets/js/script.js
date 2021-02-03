@@ -22,7 +22,7 @@ const projectInfo = [
 	{
 		name: "Pagebound",
 		description: `An online book club where you can find clubs in your area or create your own, as well as participate in book discussions.`,
-		details: `<p>Pagebound is a full stack group project from UW Coding Bootcamp.  Our group didn't have fixed roles, so I was involved at all levels of the stack.  However, I was primarily responsible for the database models, and I made the logo as well.<p>
+		details: `<p>Pagebound is a full stack group project from UW Coding Bootcamp.  Our group didn't have fixed roles, so I was involved at all levels of the stack.  In addition to creating a couple of the pages, I was primarily responsible for the database models, and I made the logo as well.<p>
 		<p>This project was made with HTML/CSS/Javascript/JQuery on the frontend, and Node/Express/Sequelize/MySQL on the backend.  It also uses the <a href="https://developers.google.com/books" target="_blank">Google Books API</a> and <a href="https://www.zipcodeapi.com/" target="_blank">Zip Code API</a>.</p>`,
 		link: "https://tranquil-shelf-96400.herokuapp.com/",
 		github: "https://github.com/TheBobbyLlama/pagebound"
