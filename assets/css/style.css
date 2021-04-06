@@ -449,6 +449,11 @@ section:hover .showcase div::after {
 	list-style: none;
 }
 
+.stackedcontent ul:not(:first-child) {
+	list-style: none;
+	margin-top: 8px;
+}
+
 .dwemermatron {
 	background-image: url(../images/skyrim-dwemermatron.jpg);
 }
@@ -459,6 +464,10 @@ section:hover .showcase div::after {
 
 .rmao {
 	background-image: url(../images/skyrim-RMAO.gif);
+}
+
+.profile-viewer {
+	background-image: url(../images/profile-viewer.png);
 }
 
 #modalBG {
@@ -753,11 +762,11 @@ section:hover .showcase div::after {
 		margin: 10px 0px;
 	}
 
-	.dwemermatron, .reincarnation, .rmao {
+	.dwemermatron, .reincarnation, .rmao, .profile-viewer {
 		background-image: none;
 	}
 
-	.dwemermatron h4, .reincarnation h4, .rmao h4 {
+	.dwemermatron h4, .reincarnation h4, .rmao h4, .profile-viewer h4 {
 		background-position: center;
 		background-size: cover;
 		color: transparent;
@@ -777,6 +786,10 @@ section:hover .showcase div::after {
 
 	.rmao h4 {
 		background-image: url(../images/skyrim-RMAO.gif);
+	}
+
+	.profile-viewer h4 {
+		background-image: url(../images/profile-viewer.png);
 	}
 
 	#modalBG > div {
