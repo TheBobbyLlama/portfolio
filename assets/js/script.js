@@ -35,6 +35,14 @@ const projectInfo = [
 		link: "https://eso-rollplay.net/",
 		github: "https://github.com/TheBobbyLlama/eso-rollplay",
 	},
+	{
+		name: "CoH Builder",
+		description: `A character building application for the City of Heroes online game.`,
+		details: `<p>This is an online counterpart to the <a href="https://midsreborn.com/" target="_blank">Mids Reborn Hero Designer</a> desktop application, and uses data extracted from that program.  It is a work in progress, but will have full import and export capabilities with Mids!  Currently, characters may be fully created, but there is no way to save or import them, and no stats are calculated.<p>
+		<p>CoH Builder is a progressive web application written in React.  It can be installed to the user's desktop or device and used offline if desired.</p>`,
+		link: "https://thebobbyllama.github.io/coh-builder/",
+		github: "https://github.com/TheBobbyLlama/coh-builder"
+	}
 ];
 
 const initializePage = function() {

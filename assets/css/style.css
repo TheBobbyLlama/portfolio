@@ -397,6 +397,10 @@ section:hover .showcase div::after {
 	background-image: url(https://github.com/alexo-a/projectivity/blob/develop/snapshot.png?raw=true);
 }
 
+.showcase-cohbuilder {
+	background-image: url(https://github.com/TheBobbyLlama/coh-builder/blob/main/snapshot.png?raw=true);
+}
+
 .stackedcontent {
 	align-items: stretch;
 	color: #d0d0e0;
