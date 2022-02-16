@@ -382,23 +382,23 @@ section:hover .showcase div::after {
 }
 
 .showcase-hopto {
-	background-image: url(https://user-images.githubusercontent.com/64815650/87613461-00ada300-c6d3-11ea-92d9-47cded5c1550.png?raw=true);
+	background-image: url('https://user-images.githubusercontent.com/64815650/87613461-00ada300-c6d3-11ea-92d9-47cded5c1550.png?raw=true');
 }
 
 .showcase-esorp {
-	background-image: url(https://github.com/TheBobbyLlama/eso-rollplay/blob/master/snapshot.gif?raw=true);
+	background-image: url('https://github.com/TheBobbyLlama/eso-rollplay/blob/master/snapshot.gif?raw=true');
 }
 .showcase-pagebound {
-	background-image: url(https://github.com/TheBobbyLlama/pagebound/blob/master/Snapshot.png?raw=true);
+	background-image: url('https://github.com/TheBobbyLlama/pagebound/blob/master/Snapshot.png?raw=true');
 }
 
 /* TODO - Better screenshot to come. */
 .showcase-projectivity {
-	background-image: url(https://github.com/alexo-a/projectivity/blob/develop/snapshot.png?raw=true);
+	background-image: url('https://github.com/alexo-a/projectivity/blob/develop/snapshot.png?raw=true');
 }
 
 .showcase-cohbuilder {
-	background-image: url(https://github.com/TheBobbyLlama/coh-builder/blob/main/snapshot.png?raw=true);
+	background-image: url('https://github.com/TheBobbyLlama/coh-builder/blob/main/snapshot.png?raw=true');
 }
 
 .stackedcontent {
@@ -458,20 +458,24 @@ section:hover .showcase div::after {
 	margin-top: 8px;
 }
 
+.timekeeper {
+	background-image: url('https://thebobbyllama.github.io/timekeeper-bot/assets/images/bot-demo.png');
+}
+
 .dwemermatron {
-	background-image: url(../images/skyrim-dwemermatron.jpg);
+	background-image: url('../images/skyrim-dwemermatron.jpg');
 }
 
 .reincarnation {
-	background-image: url(../images/skyrim-reincarnation.jpg);
+	background-image: url('../images/skyrim-reincarnation.jpg');
 }
 
 .rmao {
-	background-image: url(../images/skyrim-RMAO.gif);
+	background-image: url('../images/skyrim-RMAO.gif');
 }
 
 .profile-viewer {
-	background-image: url(../images/profile-viewer.png);
+	background-image: url('../images/profile-viewer.png');
 }
 
 #modalBG {
@@ -638,6 +642,13 @@ section:hover .showcase div::after {
 	.showcase div p {
 		background-color: var(--content-background);
 		max-height: 500px;
+	}
+
+	.timekeeper {
+		background-position: top left !important;
+		background-size: initial !important;
+		padding-top: 160px !important;
+		padding-right: 10px !important;
 	}
 
 	#modalBG > div {
