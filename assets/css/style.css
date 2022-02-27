@@ -458,8 +458,8 @@ section:hover .showcase div::after {
 	margin-top: 8px;
 }
 
-.timekeeper {
-	background-image: url('https://thebobbyllama.github.io/timekeeper-bot/assets/images/bot-demo.png');
+.timely {
+	background-image: url('https://thebobbyllama.github.io/timely-bot/assets/images/bot-demo.png');
 }
 
 .dwemermatron {
@@ -644,7 +644,7 @@ section:hover .showcase div::after {
 		max-height: 500px;
 	}
 
-	.timekeeper {
+	.timely {
 		background-position: top left !important;
 		background-size: initial !important;
 		padding-top: 160px !important;
