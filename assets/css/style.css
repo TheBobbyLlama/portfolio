@@ -18,6 +18,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 a {
 	color: #508068;
 }
@@ -216,11 +220,13 @@ section#about {
 }
 
 section#about img {
+	border-radius: 6px;
 	float: right;
 	height: 300px;
 	margin: 10px 0px 10px 10px;
 	width: 300px;
 }
+
 
 section#about li {
 	margin-left: 20px;

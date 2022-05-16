@@ -15,7 +15,7 @@ const projectInfo = [
 		name: "Hop To",
 		description: `Find breweries either in your hometown or while on vacation, and plan a trip to see them!`,
 		details: `<p>Hop To is a group project from UW Coding Bootcamp.  My responsibilities for the project were the Bing Maps display and tour selection/routing.  I also created most of the custom icons for the project.<p>
-		<p>This project was made with HTML/CSS/Javascript/JQuery, and uses the <a href="https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api" target="_blank">Bing Maps API</a> <a href="https://www.openbrewerydb.org/" target="_blank">Open Brewery DB</a> and <a href="https://www.zipcodeapi.com/" target="_blank">Zip Code API</a>.</p>`,
+		<p>This project was made with HTML/CSS/Javascript/JQuery, and uses the <a href="https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api" target="_blank">Bing Maps API</a>, <a href="https://www.openbrewerydb.org/" target="_blank">Open Brewery DB</a> and <a href="https://www.zipcodeapi.com/" target="_blank">Zip Code API</a>.</p>`,
 		link: "https://laurenceokite.github.io/hop-to/",
 		github: "https://github.com/laurenceokite/hop-to",
 	},
@@ -38,8 +38,8 @@ const projectInfo = [
 	{
 		name: "CoH Builder",
 		description: `A character building application for the City of Heroes online game.`,
-		details: `<p>This is an online counterpart to the <a href="https://midsreborn.com/" target="_blank">Mids Reborn Hero Designer</a> desktop application, and uses data extracted from that program.  It is a work in progress, but currently, characters may be fully created and import/export with the Mids program is supported.  However, no stats are being calculated yet.<p>
-		<p>CoH Builder is a progressive web application written in React.  It can be installed to the user's desktop or device and used offline if desired.</p>`,
+		details: `<p>This is an online counterpart to the <a href="https://midsreborn.com/" target="_blank">Mids Reborn Hero Designer</a> desktop application, and uses data extracted from that program.  It is a work in progress, but currently, characters may be fully created and import/export with the Mids program is supported.<p>
+		<p>CoH Builder is a progressive web application written in React, with Context API for state management and JSON data files.  It can be installed to the user's desktop or device and used offline if desired.</p>`,
 		link: "https://thebobbyllama.github.io/coh-builder/",
 		github: "https://github.com/TheBobbyLlama/coh-builder"
 	}
