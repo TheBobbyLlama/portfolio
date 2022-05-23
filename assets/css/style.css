@@ -407,6 +407,10 @@ section:hover .showcase div::after {
 	background-image: url('https://github.com/TheBobbyLlama/coh-builder/blob/main/snapshot.png?raw=true');
 }
 
+.showcase-cherit {
+	background-image: url('../images/cherit.jpg');
+}
+
 .stackedcontent {
 	align-items: stretch;
 	color: #d0d0e0;

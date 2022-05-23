@@ -42,6 +42,14 @@ const projectInfo = [
 		<p>CoH Builder is a progressive web application written in React, with Context API for state management and JSON data files.  It can be installed to the user's desktop or device and used offline if desired.</p>`,
 		link: "https://thebobbyllama.github.io/coh-builder/",
 		github: "https://github.com/TheBobbyLlama/coh-builder"
+	},
+	{
+		name: "Cherit",
+		description: "A site for creating and sharing scrapbooks or photo albums.",
+		details: `<p>Cherit is an online photo album and scrapbooking site that allows for creating and sharing your creations, all in an easy to use interface.</p>
+		<p>This project was made with React, NextJS, and Redux.</p>`,
+		link: "https://scrapbook-eight.vercel.app/",
+		github: "https://github.com/TheBobbyLlama/scrapbook"
 	}
 ];
 
