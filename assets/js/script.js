@@ -3,29 +3,20 @@ const contactInfo = $("#contact-info");
 
 const projectInfo = [
 	{
-		id: "projectivity",
-		name: "Projectivity",
-		description: `Track your projects and manage timesheets in this all-in-one productivity solution.`,
-		details: `<p>Projectivity was the final group project of UW Coding Bootcamp.  I did the Groups and Timesheets pages, the Conversations and Time Tracker widgets, much of the backend query support, and I also created the site's logo.</p>
-		<p>This is a full stack MERN application - Mongo, Express, React, and Node.  Other technologies used include JSON Web Tokens, GraphQL, and Apollo Client/Server</p>`,
-		link: "https://evening-dawn-14533.herokuapp.com/",
-		github: "https://github.com/alexo-a/projectivity",
+		name: "ESO Profiles",
+		description: `A site for editing and viewing character profiles for the game The Elder Scrolls Online.`,
+		details: `<p>It is a React upgrade to the profile system from my ESO Rollplay project, and uses the same database.<p>
+		<p>ESO Profiles is a work in progress, using React and Redux, as well as <a href="https://firebase.google.com/" target="_blank">Google Firebase</a> to store data.</p>`,
+		link: "https://thebobbyllama.github.io/eso-profiles/",
+		github: "https://github.com/TheBobbyLlama/eso-profiles"
 	},
 	{
-		name: "Hop To",
-		description: `Find breweries either in your hometown or while on vacation, and plan a trip to see them!`,
-		details: `<p>Hop To is a group project from UW Coding Bootcamp.  My responsibilities for the project were the Bing Maps display and tour selection/routing.  I also created most of the custom icons for the project.<p>
-		<p>This project was made with HTML/CSS/Javascript/JQuery, and uses the <a href="https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api" target="_blank">Bing Maps API</a>, <a href="https://www.openbrewerydb.org/" target="_blank">Open Brewery DB</a> and <a href="https://www.zipcodeapi.com/" target="_blank">Zip Code API</a>.</p>`,
-		link: "https://laurenceokite.github.io/hop-to/",
-		github: "https://github.com/laurenceokite/hop-to",
-	},
-	{
-		name: "Pagebound",
-		description: `An online book club where you can find clubs in your area or create your own, as well as participate in book discussions.`,
-		details: `<p>Pagebound is a full stack group project from UW Coding Bootcamp.  Our group didn't have fixed roles, so I was involved at all levels of the stack.  In addition to creating a couple of the pages, I was primarily responsible for the database models, and I made the logo as well.<p>
-		<p>This project was made with HTML/CSS/Javascript/JQuery on the frontend, and Node/Express/Sequelize/MySQL on the backend.  It also uses the <a href="https://developers.google.com/books" target="_blank">Google Books API</a> and <a href="https://www.zipcodeapi.com/" target="_blank">Zip Code API</a>.</p>`,
-		link: "https://tranquil-shelf-96400.herokuapp.com/",
-		github: "https://github.com/TheBobbyLlama/pagebound"
+		name: "Cherit",
+		description: "A site for creating and sharing scrapbooks or photo albums.",
+		details: `<p>Cherit is an online photo album and scrapbooking site that allows for creating and sharing your creations, all in an easy to use interface.</p>
+		<p>This project was made with React, NextJS, and Redux.  Images for the project are saved using the <a href="https://apidocs.imgur.com/" target="_blank">Imgur API</a>.</p>`,
+		link: "https://scrapbook-eight.vercel.app/",
+		github: "https://github.com/TheBobbyLlama/scrapbook"
 	},
 	{
 		name: "ESO Rollplay",
@@ -36,27 +27,19 @@ const projectInfo = [
 		github: "https://github.com/TheBobbyLlama/eso-rollplay",
 	},
 	{
-		name: "CoH Builder",
-		description: `A character building application for the City of Heroes online game.`,
-		details: `<p>This is an online counterpart to the <a href="https://midsreborn.com/" target="_blank">Mids Reborn Hero Designer</a> desktop application, and uses data extracted from that program.  It is a work in progress, but currently, characters may be fully created and import/export with the Mids program is supported.<p>
-		<p>CoH Builder is a progressive web application written in React, with Context API for state management and JSON data files.  It can be installed to the user's desktop or device and used offline if desired.</p>`,
-		link: "https://thebobbyllama.github.io/coh-builder/",
-		github: "https://github.com/TheBobbyLlama/coh-builder"
+		name: "Hop To",
+		description: `Find breweries either in your hometown or while on vacation, and plan a trip to see them!`,
+		details: `<p>Hop To is a group project from UW Coding Bootcamp.  My responsibilities for the project were the Bing Maps display and tour selection/routing.  I also created most of the custom icons for the project.<p>
+		<p>This project was made with HTML/CSS/Javascript/JQuery, as well as <a href="https://get.foundation/" target="_blank">Foundation Framework</a>. It also makes use of the <a href="https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api" target="_blank">Bing Maps API</a>, <a href="https://www.openbrewerydb.org/" target="_blank">Open Brewery DB</a> and <a href="https://www.zipcodeapi.com/" target="_blank">Zip Code API</a>.</p>`,
+		link: "https://laurenceokite.github.io/hop-to/",
+		github: "https://github.com/laurenceokite/hop-to",
 	},
-	{
-		name: "Cherit",
-		description: "A site for creating and sharing scrapbooks or photo albums.",
-		details: `<p>Cherit is an online photo album and scrapbooking site that allows for creating and sharing your creations, all in an easy to use interface.</p>
-		<p>This project was made with React, NextJS, and Redux.</p>`,
-		link: "https://scrapbook-eight.vercel.app/",
-		github: "https://github.com/TheBobbyLlama/scrapbook"
-	}
 ];
 
 const initializePage = function() {
 	const showcaseList = $(".showcase > div");
 
-	for (var i = 0; i < showcaseList.length; i++) {
+	for (let i = 0; i < showcaseList.length; i++) {
 		const project = projectInfo.find(element => element.name == showcaseList[i].getAttribute("id"));
 		
 		if (project) {
@@ -88,13 +71,27 @@ const launchProjectGithub = function() {
 }
 
 const showProjectPopup = function(project) {
-	var modalPane = $("#previewModal");
+	const projectIndex = projectInfo.indexOf(project);
+	const modalPane = $("#previewModal");
+
 	modalPane.children("h2").text(project.name);
 	modalPane.find("a").attr("href", project.link).text(project.link);
 	modalPane.children("p:first-of-type")[0].innerHTML = "<p><em>" + project.description + "</em></p>";
 	modalPane.children("p:last-of-type")[0].innerHTML = project.details;
 	modalPane.children("iframe").attr("src", project.link);
 	modalPane.find("#modalGithubButton").attr("data-link", project.github);
+
+	if (projectIndex > 0) {
+		modalPane.find("#leftButton").show().off().on("click", () => { showProjectPopup(projectInfo[projectIndex - 1])});
+	} else {
+		modalPane.find("#leftButton").hide();
+	}
+	
+	if (projectIndex < projectInfo.length - 1) {
+		modalPane.find("#rightButton").show().off().on("click", () => { showProjectPopup(projectInfo[projectIndex + 1])});
+	} else {
+		modalPane.find("#rightButton").hide();
+	}
 
 	$("#modalBG").addClass("show");
 	modalPane.addClass("show");

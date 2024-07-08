@@ -333,6 +333,7 @@ section > *:last-child, .inset > *:last-child {
 .showcase div {
 	background-position: center;
 	background-size: cover;
+	border-radius: 4px;
 	height: 300px;
 	margin: 10px;
 	overflow: hidden;
@@ -394,17 +395,9 @@ section:hover .showcase div::after {
 .showcase-esorp {
 	background-image: url('https://github.com/TheBobbyLlama/eso-rollplay/blob/master/snapshot.gif?raw=true');
 }
-.showcase-pagebound {
-	background-image: url('https://github.com/TheBobbyLlama/pagebound/blob/master/Snapshot.png?raw=true');
-}
 
-/* TODO - Better screenshot to come. */
-.showcase-projectivity {
-	background-image: url('https://github.com/alexo-a/projectivity/blob/develop/snapshot.png?raw=true');
-}
-
-.showcase-cohbuilder {
-	background-image: url('https://github.com/TheBobbyLlama/coh-builder/blob/main/snapshot.png?raw=true');
+.showcase-eso-profiles {
+	background-image: url('../images/eso-profiles.png');
 }
 
 .showcase-cherit {
@@ -510,6 +503,12 @@ section:hover .showcase div::after {
 }
 
 #modalBG > div {
+	overflow: visible;
+	position: relative;
+	width: 80%;
+}
+
+#modalBG #previewModal {
 	background-color: var(--content-background);
 	border: solid 2px var(--page-background);
 	border-radius: 10px;
@@ -518,16 +517,28 @@ section:hover .showcase div::after {
 	max-height: 100%;
 	overflow: auto;
 	padding: 10px 20px;
-	width: 80%;
 }
 
-#modalBG > div > div:last-child {
+#modalBG #leftButton, #modalBG #rightButton {
+	position: absolute;
+	top: calc(50% - 12px);
+}
+
+#modalBG #leftButton {
+	left: 0;
+}
+
+#modalBG #rightButton {
+	right: 0;
+}
+
+#modalBG #modalButtons {
 	display: flex;
+	gap: 20px;
 	justify-content: center;
 }
 
 #modalBG button {
-	margin: 10px;
 	padding: 2px 8px;
 }
 
@@ -551,7 +562,7 @@ section:hover .showcase div::after {
 	margin: 10px;
 }
 
-#modalBG > div > div {
+#modalBG .linkholder {
 	text-align: center;
 }
 
@@ -825,6 +836,15 @@ section:hover .showcase div::after {
 
 	#modalBG iframe {
 		height: 300px;
+	}
+	
+	#modalBG #leftButton, #modalBG #rightButton {
+		position: initial;
+	}
+
+	#modalBG #modalButtons {
+		gap: 10px;
+		justify-content: space-between;
 	}
 }
 

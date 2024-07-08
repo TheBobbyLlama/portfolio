@@ -29,7 +29,7 @@
 			<ul>
 				<li>Highly proficient in frontend web development:
 					<ul>
-						<li>Highly proficient with common technologies - HTML5, CSS, Javascript</li>
+						<li>Highly proficient with common technologies - HTML5, CSS, Javascript, JQuery</li>
 						<li>Strong grounding in React and concepts like JSX, Virtual DOM, functional and class components, lifecycle methods, custom hooks vs. high order components, Context API.</li>
 						<li>Familiar with React libraries like React Router and Redux.</li>
 					</ul>
@@ -44,17 +44,17 @@
 						<li>SQL, MongoDB, Google Firebase</li>
 					</ul>
 				</li>
-				<li>Software development background - C#.</li>
-				<li>Willing to relocate or work remotely.</li>
+				<li>Software development background - C# and C++.</li>
+				<li>Willing to relocate but prefer remote.</li>
 				<li>Hobbies include gaming, tinkering with games, travel, and spending time with nieces!</li>
 			</ul>
 		</section>
 		<section id="web">
 			<h2>Web Projects</h2>
 			<div class="showcase">
-				<div id="CoH Builder" class="showcase-cohbuilder">
-					<a href="https://thebobbyllama.github.io/coh-builder/" target="_blank">
-						<h3>CoH Builder</h3>
+				<div id="ESO Profiles" class="showcase-eso-profiles">
+					<a href="https://thebobbyllama.github.io/eso-profiles/" target="_blank">
+						<h3>ESO Profiles</h3>
 						<p></p>
 					</a>
 				</div>
@@ -64,12 +64,12 @@
 						<p></p>
 					</a>
 				</div>
-				<div id="Projectivity" class="showcase-projectivity">
+				<!-- <div id="Projectivity" class="showcase-projectivity">
 					<a href="https://evening-dawn-14533.herokuapp.com/" target="_blank">
 						<h3>Projectivity</h3>
 						<p></p>
 					</a>
-				</div>
+				</div> -->
 				<div id="ESO Rollplay" class="showcase-esorp">
 					<a href="https://eso-rollplay.net/" target="_blank">
 						<h3>ESO Roleplay</h3>
@@ -82,12 +82,12 @@
 						<p></p>
 					</a>
 				</div>
-				<div id="Pagebound" class="showcase-pagebound">
+				<!-- <div id="Pagebound" class="showcase-pagebound">
 					<a href="https://tranquil-shelf-96400.herokuapp.com/" target="_blank">
 						<h3>Pagebound</h3>
 						<p></p>
 					</a>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<section id="other">
@@ -168,7 +168,7 @@
 					<div class="profile-viewer">
 						<h4>RP Profile Viewer Addon</h4>
 						<p>
-							Powered by <a href="https://eso-rollplay.net" target="_blank">ESO Rollplay</a> (<a href="#web">above</a>), this is an in-game addon to view character biographical information, in the vein of World of Warcraft's Total RP (<a href="https://www.curseforge.com/wow/addons/total-rp-3" target="_blank">TRP</a>) addon.  This has been attempted several times in the game's lifespan, but after seven years, I'm the first one to deliver something that works!
+							Powered by <a href="https://eso-rollplay.net" target="_blank">ESO Rollplay</a> / <a href="https://thebobbyllama.github.io/eso-profiles/" target="_blank">ESO Proflies</a> (<a href="#web">above</a>), this is an in-game addon to view character biographical information, in the vein of World of Warcraft's Total RP (<a href="https://www.curseforge.com/wow/addons/total-rp-3" target="_blank">TRP</a>) addon.  This has been attempted several times in the game's lifespan, but after seven years, I'm the first one to deliver something that works!
 						</p>
 						<ul>
 							<li>
@@ -191,17 +191,21 @@
 			</ul>
 		</section>
 		<div id="modalBG">
-			<div id="previewModal">
-				<h2>Title</h2>
-				<p>Description</p>
-				<p>Detailed Description</p>
-				<div class="linkholder">
-					<a href="about:blank" target="_blank">Link</a>
-				</div>
-				<iframe></iframe>
-				<div>
-					<button type="button" id="modalGithubButton">Github</button>
-					<button type="button" id="modalCloseButton">Close</button>
+			<div>
+				<div id="previewModal">
+					<h2>Title</h2>
+					<p>Description</p>
+					<p>Detailed Description</p>
+					<div class="linkholder">
+						<a href="about:blank" target="_blank">Link</a>
+					</div>
+					<iframe></iframe>
+					<div id="modalButtons">
+						<button type="button" id="leftButton">&lt;</button>
+						<button type="button" id="modalGithubButton">Github</button>
+						<button type="button" id="modalCloseButton">Close</button>
+						<button type="button" id="rightButton">&gt;</button>
+					</div>
 				</div>
 			</div>
 		</div>
